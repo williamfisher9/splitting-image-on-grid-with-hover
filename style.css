@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100svh;
+    background-color: #333;
+
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    width: 450px;
+    height: 400px;
+    position: relative;
+}
+
+.wrapper span {
+    position: absolute;
+
+    inset: 0;
+
+    background: url("./assets/bg.jpg") no-repeat center/cover;
+
+    transition: 0.3s;
+}
+
+.wrapper span:nth-child(1){
+    clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+}
+
+.wrapper span:nth-child(2){
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+}
+
+.wrapper span:nth-child(3){
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+}
+
+.wrapper span:nth-child(4){
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+}
+
+
+span:nth-child(1) {
+    clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+    transition-delay: 0;
+}
+
+span:nth-child(2) {
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+    transition-delay: 0.2s;
+}
+
+span:nth-child(3) {
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+    transition-delay: 0.3s;
+}
+
+span:nth-child(4) {
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    transition-delay: 0.4s;
+}
+
+/* Hover Effects */
+.wrapper:hover span:nth-child(1) {
+    transform: translate(-40px, -60px) rotate(-20deg);
+}
+
+.wrapper:hover span:nth-child(2) {
+    transform: translate(40px, -100px) rotate(25deg);
+}
+
+.wrapper:hover span:nth-child(3) {
+    transform: translate(-40px, 80px) rotate(15deg);
+}
+
+.wrapper:hover span:nth-child(4) {
+    transform: translate(40px, 80px) rotate(-15deg);
+}
+
+
+
